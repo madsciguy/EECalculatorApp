@@ -1,0 +1,644 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="config.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.2.0.js" type="text/javascript"></script>
+<script src="android.js" type="text/javascript"></script>
+</head> 
+<div id="home" data-role="page" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<h1>Electrical Engineering Toolkit</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-count-theme="a" data-role="listview" data-split-theme="a" data-theme="a" data-divider-theme="a">
+			<li><a href="#Resistor">Resistors in Series and Parallel</a></li>
+            <li><a href="#Capacitor">Capacitors in Series and Parallel</a></li>
+            <li><a href="#OHMs">Ohm's Law</a></li>
+            <li><a href="#Resistor4">Resistor Color Code (4 Band)</a></li>
+			<li><a href="#Resistor5">Resistor Color Code (5 Band)</a></li>
+            <li><a href="#Resistor6">Resistor Color Code (6 Band)</a></li>
+            <li><a href="#CapacitorCodes">Capacitor Codes</a></li>
+            <li><a href="#LED">LED Series Resistor Calculator</a></li>
+            <li><a href="#Timer">555 Timer Calculator</a></li>
+            <li><a href="#PCB">PCB Circuit Trace Width</a></li>
+            <li><a href="#Transistor">Transistor Simulator And Calculator</a></li>
+            <li><a href="#Love">Engineering Love Calculator</a></li>
+            <li><a href="#Links">Featured Links</a></li>
+		</ul>		
+	</div>
+	<div class="center" data-role="footer" data-theme="a">		
+        <h1>Electrical Engineering Toolkit</h1>
+	</div>
+</div>
+
+
+
+<div class="center" id="Resistor" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Resistors in Series and Parallel</h1>
+  </div>
+  <span class="resistor">
+  <div data-role="content">
+    <div data-role="fieldcontain">
+        <select name="selectmenuResistor" id="selectmenuResistor">
+        <option value="series">Series</option>
+        <option value="parallel">Parallel</option>
+      </select>
+    </div>
+  
+    <div data-role="fieldcontain">
+      <label for="Resistor1">Resistor 1:</label>
+      <input type="number" name="Resistor1" id="Resistor1" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Resistor2">Resistor 2:</label>
+      <input type="number" name="Resistor2" id="Resistor2" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Resistor3">Resistor 3:</label>
+      <input type="number" name="Resistor3" id="Resistor3" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Resistor4">Resistor 4:</label>
+      <input type="number" name="Resistor4" id="Resistor4" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Resistor5">Resistor 5:</label>
+      <input type="number" name="Resistor5" id="Resistor5" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="ResistorResult">Result Resistance:</label>
+      <input type="number" name="ResistorResult" id="ResistorResult" value=""  />
+    </div>  
+  
+  </div>
+  </span>
+  <div class="center" data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+<div class="center" id="Capacitor" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Capacitors in Series and Parallel</h1>
+  </div><span class="capacitor">
+  <div data-role="content">
+    <div data-role="fieldcontain">
+        <select name="selectmenuCapacitor" id="selectmenuCapacitor">
+        <option value="series">Series</option>
+        <option value="parallel">Parallel</option>
+      </select>
+    </div>
+  
+    <div data-role="fieldcontain">
+      <label for="Capacitor1">Capacitor 1:</label>
+      <input type="number" name="Capacitor1" id="Capacitor1" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Capacitor2">Capacitor 2:</label>
+      <input type="number" name="Capacitor2" id="Capacitor2" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Capacitor3">Capacitor 3:</label>
+      <input type="number" name="Capacitor3" id="Capacitor3" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Capacitor4">Capacitor 4:</label>
+      <input type="number" name="Capacitor4" id="Capacitor4" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="Capacitor5">Capacitor 5:</label>
+      <input type="number" name="Capacitor5" id="Capacitor5" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="CapacitorResult">Result Capacitance:</label>
+      <input type="number" name="CapacitorResult" id="CapacitorResult" value=""  />
+    </div>  
+  
+  </div>
+  </span>
+  <div class="center" data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+<div id="LED" class ="center" data-role="page" data-theme="a">
+	<div data-role="header">
+		<h1>LED Series Resistor</h1>
+	</div>
+    <span class="seriesLED">
+	<div data-role="content" data-theme="a">
+      <div data-role="fieldcontain">
+        <label for="textinput">Supply Voltage (V):</label>
+        <input type="number" name="textinput" id="textinput" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="textinput2">Diode Forward Voltage (V):</label>
+        <input type="number" name="textinput2" id="textinput2" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="textinput3">Diode Forward Current (mA):</label>
+        <input type="number" name="textinput3" id="textinput3" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="textinput4">Result:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+		    </div>
+            </span>
+	
+	<div data-role="footer" data-theme="a">
+		<a href="#home" data-role="button">EE Calculator Home</a>
+	</div>
+</div>
+
+
+
+
+
+
+<div id="OHMs" class="center" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Ohm's Law</h1>
+  </div>
+  <span class="OHMs">
+  <div data-role="content">
+  Enter any two known values and press "Calculate" to solve for the others. 
+    <div data-role="fieldcontain">
+      <label for="inputVoltage">Voltage (E) (Volts):</label>
+      <input type="number" name="inputVoltage" id="inputVoltage" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="inputCurrent">Current (I) (Amps):</label>
+      <input type="number" name="inputCurrent" id="inputCurrent" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="inputResistance">Resistance (R) (Ohms):</label>
+      <input type="number" name="inputResistance" id="inputResistance" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="inputPower">Power (P) (Watts):</label>
+      <input type="number" name="inputPower" id="inputPower" value=""  />
+    </div>    
+    <input type="button" data-icon="gear" value="Calculate" onclick="calculateOHM();" id="calculateOHM"></input> 
+  </div>
+  </span>
+  
+  
+  <div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="center" id="Resistor4" data-role="page" data-theme="a">
+	<div data-role="header" data-theme="a">
+		<h1>Resistor Color Code (4 Band)</h1>
+	</div>
+    
+ <span class="band4">   
+<h3>Bands:</h3>
+<fieldset data-role="controlgroup" data-type="horizontal" > 
+    <select name="select-choice-4-1" id="select-choice-4-1">
+        <option>1</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-4-2" id="select-choice-4-2">
+        <option>2</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-4-3" id="select-choice-4-3">
+        <option>3</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-4-4" id="select-choice-4-4">
+    	<option>4</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+          <option value="option11">Gold</option>
+          <option value="option12">Silver</option>
+    </select>
+</fieldset>
+             
+            <div data-role="fieldcontain">
+        <label  for:"textinput4">Result:<br></label>
+        <input type="text" name="textinput4" id="result4" value=""  />
+      </div>
+      </span>    
+          
+  <div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+  </div>
+ 
+
+
+
+
+
+
+
+
+<div class="center" id="CapacitorCodes" data-role="page" data-theme="a">
+	<div data-role="header">
+		<h1>Capacitor Codes</h1>
+	</div>
+    <span class = "capCodes">
+	<div data-role="content" data-theme="a">
+      <div data-role="fieldcontain">
+        <label for="capInput">Input #:</label>
+        <input type="number" name="capInput" id="capInput" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="outputPF">Capacitance (pF):</label>
+        <input type="text" name="outputPF" id="outputPF" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="outputNF">Capacitance (nF)::</label>
+        <input type="text" name="outputNF" id="outputNF" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="outputUF">Capacitance (uF):</label>
+        <input type="text" name="outputUF" id="outputUF" value=""  />
+      </div>
+    </div>
+	<div data-role="footer">
+		<a href="#home" data-role="button">EE Calculator Home</a>
+	</div>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+<div class="center" id="Resistor5" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Resistor Color Code (5 Band)</h1>
+  </div>
+  <div data-role="content">
+  <span class="band5">
+  <h3>Bands:</h3>
+<fieldset data-role="controlgroup" data-type="horizontal" > 
+    <select name="select-choice-5-1" id="select-choice-5-1">
+        <option>1</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-5-2" id="select-choice-5-2">
+        <option>2</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-5-3" id="select-choice-5-3">
+        <option>3</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-5-4" id="select-choice-5-4">
+    	<option>4</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-5-5" id="select-choice-5-5">
+        <option>5</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+          <option value="option11">Gold</option>
+          <option value="option12">Silver</option>
+    </select>
+</fieldset>
+
+            <div data-role="fieldcontain">
+        <label class="result" for:"textinput5">Result:<br></label>
+        <input type="text" name="textinput5" id="result5" value=""  />
+      </div>
+      
+      </span>
+      
+  </div>
+  <div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="center" id="Resistor6" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Resistor Color Code (6 Band)</h1>
+  </div>
+  <div data-role="content">
+  <span class="band6">
+  <h3>Bands:</h3>
+  <fieldset data-role="controlgroup" data-type="horizontal" > 
+    <select name="select-choice-6-1" id="select-choice-6-1">
+        <option>1</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-6-2" id="select-choice-6-2">
+        <option>2</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-6-3" id="select-choice-6-3">
+        <option>3</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-6-4" id="select-choice-6-4">
+    	<option>4</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+    </select>
+    <select name="select-choice-6-5" id="select-choice-6-5">
+        <option>5</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+          <option value="option10">White</option>
+          <option value="option11">Gold</option>
+          <option value="option12">Silver</option>
+    </select>
+        <select name="select-choice-6-6" id="select-choice-6-6">
+        <option>6</option>
+          <option value="option1">Black</option>
+          <option value="option2">Brown</option>
+          <option value="option3">Red</option>
+          <option value="option4">Orange</option>
+          <option value="option5">Yellow</option>
+          <option value="option6">Green</option>
+          <option value="option7">Blue</option>
+          <option value="option8">Violet</option>
+          <option value="option9">Grey</option>
+    </select>
+</fieldset>
+      
+            <div data-role="fieldcontain">
+        <label for="textinput5" >Result:<br></label>
+        <input type="text" name="textinput5" id="result6"  value=""  />
+        </div>
+        </span>
+      
+
+  </div>
+<div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="Timer" class="center" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>555 Timer</h1>
+  </div>
+  <span class = "timer555">
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <label for="textinputR1">R1 (K Ohms):</label>
+      <input type="number" name="textinputR1" id="textinputR1" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="textinputR2">R2 (K Ohms):</label>
+      <input type="number" name="textinputR2" id="textinputR2" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="textinputC">C (uF):</label>
+      <input type="number" name="textinputC" id="textinputC" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <label for="textinputT1">Positive Time (ms):</label>
+      <input type="text" name="textinputT1" id="textinputT1" value="Result"  />
+    </div>
+        <div data-role="fieldcontain">
+      <label for="textinputT2">Negative Time (ms):</label>
+      <input type="text" name="textinput11" id="textinputT2" value="Result"  />
+    </div>
+        <div data-role="fieldcontain">
+      <label for="textinputFreq">Frequency (khz):</label>
+      <input type="text" name="textinputFreq" id="textinputFreq" value="Result"  />
+    </div>
+     </div>
+     </span>
+<div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="PCB" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>PCB Circuit Trace Width</h1>
+  </div>
+  <div data-role="content">Coming Soon...</div>
+  <div class="center" data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="Transistor" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Transistor Simulator And Calculator</h1>
+  </div>
+  <div data-role="content">Coming Soon...</div>
+  <div class="center" data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="center" id="Love" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Engineering Love Calculator</h1>
+  </div>
+  <div data-role="content" class="center">"Error, Engineer Detected"</div>
+  <img class="displayed" src="forever_alone.png"  alt="Forever Alone">
+<div data-role="footer">
+    <a href="#home" data-role="button">EE Calculator Home</a>    
+  </div>
+</div>
+
+
+
+
+
+<div id="Links" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Featured Links</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="#">Matt Hack</a></li>
+      <li><a href="#">McMaster Solar Car Project</a></li>
+      <li><a href="#">Hack a Day</a></li>
+      <li><a href="#">EEVBlog</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">Page</a></li>
+    </ul>
+  </div>
+  <div class="center" data-role="footer" data-theme="a">
+    <a href="#home" data-role="button">EE Calculator Home</a>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
